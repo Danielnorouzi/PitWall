@@ -1,6 +1,7 @@
 import fastf1
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit as st
 
 
 # year, race name, session type
@@ -13,3 +14,11 @@ lap1 = laps[laps["LapNumber"] == 1]
 small_df = lap1[["Driver", "LapTime", "Position"]]
 small_df = small_df.sort_values("Position")
 print(small_df)
+
+
+
+
+
+st.title("F1 Dashboard")
+st.dataframe(small_df)
+st.line_chart(data)
