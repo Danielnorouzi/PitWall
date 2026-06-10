@@ -18,7 +18,11 @@ print(small_df)
 
 
 
-
+# UI/UX
 st.title("F1 Dashboard")
+lapNum = st.number_input("Enter Lap Number")
+if st.button("Click Me"):
+    lap1 = laps[laps["LapNumber"] == lapNum]
+    small_df = lap1[["Driver", "LapTime", "Position"]]
+    small_df = small_df.sort_values("Position")
 st.dataframe(small_df)
-st.line_chart(data)
