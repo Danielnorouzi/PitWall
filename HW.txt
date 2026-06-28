@@ -1,0 +1,3 @@
+FastF1 getter:
+
+        get_session(year , race name / location or race number, session type{"Q","R"});
